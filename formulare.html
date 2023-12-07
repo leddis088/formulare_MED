@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Rücksendeformular</title>
+</head>
+<body>
+<h1>
+    Rücksendeformular
+</h1>
+<form action="submit.html">
+    <fieldset>
+        <legend>Kontaktinformationen</legend>
+        <label for="name">Name:*</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">E-Mail:*</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="phonenumber">Telefonnummer:*</label>
+        <input type="tel" id="phonenumber" name="phonenumber" required></input><br><br>
+
+        <label for="address">Adresse:*</label>
+        <textarea id="address" name="address" required></textarea><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Nutzerdaten</legend>
+        <label for="username">Nutzername:*</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Passwort:*</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="2FA_link">2FA-BEstätungungslink:</label>
+        <input type="url" id="2FA_link" name="2FA_link"><br><br>
+    </fieldset>
+  
+    <fieldset>
+        <legend>Rücksendedetails</legend>
+        <label for="reason">Rücksendegrund:*</label>
+        <select id="reason" name="reason">
+        <option value="defect">Defektes Produkt</option>
+        <option value="wrong_article">Nicht die bestellte Ware erhalten</option>  
+        </select><br><br>
+
+        <label for="purchase_date">Kaufdatum:*</label>
+        <input type="date" id="purchase_date" name="purchase_date" required><br><br>
+
+        <label for="purchase_time">Bestellzeit:*</label>
+        <input type="time" id="purchase_time" name="purchase_time"><br><br>
+
+        <label for="order_number">Bestellnummer:*</label>
+        <input type="number" id="order_number" name="order_number" required><br><br>
+        
+        <label for="comments">Zusätzliche Kommentare:</label>
+        <textarea id="comments" name="comments"></textarea><br><br>  
+    </fieldset>
+
+    <fieldset>
+        <legend>Produktdetails</legend>
+        <label for="product">Zurückzusendendes Produkt:*</label>
+        <select id="product">
+        <option value="macBook">Apple Macbook pro 16" m3</option>
+        <option value="prozessor">AMD Ryzen 9 7950X3D</option>
+        <option value="washing-machine">MIELE WCA 030 WCS W1 Chrome Edition</option>
+        </select><br><br>
+    <label for="bill">Rechnug:</label><br>
+        <input type="file" id="bill" name="bill">
+    </fieldset>
+
+    <fieldset>
+        <legend>Rücksendetyp</legend>
+        <input type="radio" id="refund" name="return_type" value="refund">
+        <label for="refund">Rückerstattung</label><br>
+        
+        <input type="radio" id="exchange" name="return_type" value="exchange">
+        <label for="exchange">Umtausch</label><br><br>
+    </fieldset>
+  
+    <fieldset>
+        <legend>Rücksendebedingungen</legend>
+        <input type="checkbox" id="agree_terms" name="agree_terms" required>
+        <label for="agree_terms">Ich stimme den Rücksendebedingungen zu</label><br><br>
+    </fieldset>
+ 
+    <input type="submit" value="Rücksendung abschicken">
+</form>
+</body>
+</html>
